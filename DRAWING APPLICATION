@@ -1,0 +1,106 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DRAWING_APPLICATION
+{
+    class shape
+    {
+        public virtual void draw()
+        {
+            Console.WriteLine("Base-Draw Method");
+        }
+        class Rectangle : shape
+        {
+            public override void draw()
+            {
+                Console.WriteLine("Drawing Rectangle");
+                Console.WriteLine("------");
+                Console.WriteLine("|  |");
+                Console.WriteLine("------");
+
+            }
+        }
+        class Circle : shape
+        {
+            public override void draw()
+
+            {
+                Console.WriteLine("Drawing Circle");
+                Console.WriteLine("O O O");
+            }
+        }
+
+        class Triangle : shape
+        {
+            public override void draw()
+            {
+                Console.WriteLine("Drawing Triangle");
+                Console.WriteLine("TRIANGLE");
+            }
+        }
+
+        class Square : shape
+        {
+            public override void draw()
+            {
+                Console.WriteLine("Drawing Square");
+                Console.WriteLine("----");
+                Console.WriteLine("| |");
+                Console.WriteLine("----");
+            }
+        }
+        class Star : shape
+        {
+            public override void draw()
+            {
+                Console.WriteLine("Drawing Star");
+                Console.WriteLine("***");
+            }
+        }
+        public class program
+        {
+            public static void Main(string[] args)
+            {
+                shape s;
+                while (true)
+                {
+                    Console.WriteLine("\nchoose the option");
+                    Console.Write("1:Rectangle\n2:Circle\n3:Triangle\n4:Square\n5:Star\n6:Exit\n");
+
+                        int choice = Convert.ToInt32(Console.ReadLine());
+                    switch (choice)
+                    {
+                        case 1:
+                            s = new Rectangle();
+                            s.draw();
+                            break;
+                        case 2:
+                            s = new Circle();
+                            s.draw();
+                            break;
+                        case 3:
+                            s = new Triangle();
+                            s.draw();
+                            break;
+                        case 4:
+                            s = new Square();
+                            s.draw();
+                            break;
+                        case 5:
+                            s = new Star();
+                            s.draw();
+                            break;
+                        case 6:
+                            Environment.Exit(0);
+                            break;
+                            
+                }
+            }
+                Console.ReadLine();
+        }
+    }
+}
+}
