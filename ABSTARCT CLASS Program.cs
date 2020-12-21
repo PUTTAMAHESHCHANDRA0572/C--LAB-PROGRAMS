@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ABSTRACT_CLASS_DEMO
+{
+   
+        class One
+        {
+            public void OneMethod()
+            {
+
+            }
+
+            void AnimalSound()
+            {
+
+            }
+        }
+
+        class Two
+        {
+            public void OneMethod()
+            {
+
+            }
+        }
+        interface IAnimal
+        {
+
+            void AnimalSound();
+
+        }
+
+        interface IAnimalProperties
+        {
+            void AnimalMovement();
+        }
+
+        class Dog : One, IAnimal
+        {
+            public void AnimalSound()
+            {
+                // dog barking sound   
+            }
+
+            public void AnimalMovement()
+            {
+
+            }
+        }
+        class Program
+        {
+            public static void Main(string[] args)
+            {
+
+            }
+        }
+    }
